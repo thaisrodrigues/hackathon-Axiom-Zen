@@ -4,7 +4,7 @@ And here’s the repo : https://goo.gl/wFWbp3
 <br><br>
 Pdf with the details of our project http://goo.gl/BLbPfX
 <br><br>
-##LANDING PAGE DESIGN & FRONT-END KICKER UX DESIGN
+##LANDING PAGE DESIGN & FRONT-END / KICKER UX DESIGN
 <br><br>
 TEAM: <br>
 THAIS RODRIGUES - FRONT END <br>
