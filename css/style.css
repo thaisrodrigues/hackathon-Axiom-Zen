@@ -37,11 +37,12 @@ a.btn-donate {
   height: 80px;
 }
 .banner{
-  width: 100%;
+
   top: -50px !important;
   z-index: -1;
   position: absolute;
-  height: 750px;
+  width: 100% !important;
+   height: auto !important;
 }
 .jumbotron {
   background-color: transparent !important;
@@ -65,11 +66,21 @@ a.btn-donate {
   padding-right: 0px;
   padding-left: 0px;
 }
+.btn-donate-banner {
+  color: white !important;
+    text-align: center;
+    font-weight: bold;
+    background-color: #488EE3;
+    border: 2px solid #376B7D;
+    height: 50px;
+    width: 165px;
+    margin-top: 20px;
+}
 .menu-text{
   color: black !important;
 }
 .headline{
-  margin-top: 22%;
+  margin-top: 15%;
 }
 .font-bold{
   font-weight: bold;
@@ -83,7 +94,7 @@ a.btn-donate {
   left: 10px;
 }
 .div-play-video{
-  padding-top: 40px;
+  padding-top: 80px;
 }
 h1.col-lg-6.col-lg-offset-3 {
   font-size: 44px;
@@ -255,10 +266,20 @@ a:hover{
 
 }
 .btn-banner{
-  color: white !important;
-  text-align: center;
-  font-weight: bold;
-  left: 20px;
+    color: white !important;
+    background-color: #488EE3;
+    border: 2px solid #376B7D;
+    height: 30%;
+    margin-top: 20px;
+}
+.btn-banner:hover{
+	transform: scale(1.1);
+}
+a.btn-donate:hover {
+    color: black !important;
+}
+.animation-hover{
+	transform: scale(1.1);
 }
 .pills-donate{
   width: 319px;
@@ -283,18 +304,24 @@ a:hover{
 .form {
   padding: 50px 0px 0px 0px;
 }
-video {
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -o-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
+
+@media screen and (max-width: 1240px) {
+  .headline {
+     margin-top: 25%;
+   }
+   .jumbotron {
+      background-color: transparent !important;
+      position: relative !important;
+      height: 490px;
+    }  
+   .div-play-video {
+        padding-top: 0px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    video{
+       display:none;
+    }
 }
