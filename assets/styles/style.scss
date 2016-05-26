@@ -1,0 +1,101 @@
+/*Variables*/
+$navBarColor:transparent;
+$btn-donate-color:#488EE3;
+$btn-donate-border-color:#376B7D;
+/*Mixins*/
+@mixin button($width,$height,$bg-color,$border) {
+  width: $width;
+  height: $height;
+  background-color: $bg-color;
+  border: $border;
+}
+@mixin img-height($height){
+  height: $height;
+}
+@mixin margin-left(){
+    margin-left: 40px;
+}
+@mixin padding($padding...){
+    padding: $padding;
+}
+
+/*---Mixins---*/
+@font-face {
+  font-family: NanumGothic;
+  src: url(../fonts/NanumGothic.ttc);
+}
+body{
+  font-family: NanumGothic;
+  font-weight: 300;
+  color: black !important;
+}
+/* nav-bar*/
+
+.menu-text{
+  color: black !important;
+}
+
+.navbar-default{
+  background-color: $navBarColor;
+  border-color: $navBarColor;
+  padding: 20px 0px 20px 0px !important;
+}
+.margin-left{
+    @include margin-left();
+}
+.logo{
+  @include img-height(80px);
+  margin-top: -30px;
+}
+/*commom*/
+.btn-donate {
+    @include button(165px,50px,$btn-donate-color,2px solid $btn-donate-border-color);
+    a{
+      color: white !important;
+      text-align: center;
+    }
+    .padding{
+      padding: 20px 20px 20px 20px;
+    }
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+.row{
+  width: 100%;
+}
+/*banner-section*/
+.container-fluid {
+     padding-right: 0px;
+     padding-left: 0px;
+     margin-right: auto;
+     margin-left: auto;
+     .jumbotron{
+       padding-right: 0px;
+       padding-left: 0px;
+       background-color: transparent !important;
+       position: relative !important;
+       height: 626px;
+       .headline{
+           margin-top: 10%;
+       }
+     }
+     .banner {
+       top: -50px !important;
+       z-index: -1;
+       position: absolute;
+       width: 100% !important;
+       height: auto !important;
+    }
+}
+
+/*Media queries*/
+@media screen and (min-width: 1024px){
+  #img-banner {
+      display: none;
+  }
+
+}
