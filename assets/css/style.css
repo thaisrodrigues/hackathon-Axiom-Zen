@@ -30,11 +30,9 @@ a.btn-donate {
 .navbar{
   height: 100px;
 }
-#navbar{
-  margin-top: 30px;
-}
 .logo{
   height: 80px;
+  margin-top: -30px;
 }
 .banner{
 
@@ -161,7 +159,6 @@ p.col-lg-6.col-lg-offset-3 {
 }
 .color-white{
   color: white;
-  margin-left: 70px;
 }
 .img-circle{
   height: 200px;
@@ -308,7 +305,7 @@ a.btn-donate:hover {
 
 @media screen and (max-width: 1240px) {
   .headline {
-     margin-top: 25%;
+     margin-top: 20%;
    }
    .jumbotron {
       background-color: transparent !important;
@@ -325,10 +322,96 @@ a.btn-donate:hover {
 		display:none;
 	}
 }
-@media screen and (max-width: 768px) {
-    video{
-       display:none;
+@media screen and (max-width: 740px){
+  video{
+     display:none;
+  }
+  .logo {
+    height: 80px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width:991px){
+  .btn-donate {
+      width: 145px;
+      height: 50px;
+      background-color: #488EE3;
+      border: 2px solid #376B7D;
+      margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+    .jumbotron {
+      background-color: transparent !important;
+      position: relative !important;
+      height: 330px;
     }
+    h1{
+      font-size: 43px !important;
+    }
+    h2{
+      font-size: 23px !important;
+    }
+    .headline {
+      margin-top: 15%;
+    }
+    .btn-banner {
+      color: white !important;
+      background-color: #488EE3;
+      border: 2px solid #376B7D;
+      height: 30%;
+      margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:768px){
+  h1{
+    font-size: 33px !important;
+  }
+  h2{
+    font-size: 20px !important;
+  }
+  .headline {
+    margin-top: 18%;
+  }
+  .title-button {
+    padding-top: 15px !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+  }
+  .play-video{
+    display: none;
+  }
+  .div-play-video {
+    padding-top: 10px;
+    text-align: center;
+  }
+  .logo {
+    height: 80px;
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+  .headline {
+    margin-top: 22%;
+  }
+  h1{
+    font-size: 23px !important;
+  }
+  h2 {
+    font-size: 15px !important;
+  }
+  .jumbotron p {
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: 200;
+  }
+  .btn-donate{
+    display: none !important;
+  }
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: transparent !important;
+  }
 }
 @media screen and (max-width:640px){
 	.banner {
@@ -337,10 +420,36 @@ a.btn-donate:hover {
     	position: absolute;
     	width: 100% !important;
 	}
-	.jumbotron {
-    	background-color: transparent !important;
-    	position: relative !important;
-    	height: 400px;
-	}
+  .headline {
+    margin-top: 28%;
+  }
+
+
+}
+@media screen and (max-width:450px){
+
+  .jumbotron {
+    background-color: transparent !important;
+    position: relative !important;
+    height: 280px;
+  }
+  .headline {
+    margin-top: 32%;
+  }
+  .logo {
+    height: 60px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  .btn-banner {
+    color: white !important;
+    background-color: #488EE3;
+    border: 2px solid #376B7D;
+    height: 30%;
+    margin-top: 10px;
+    width: 30%;
+    margin-left: 35%;
+  }
+
 
 }
