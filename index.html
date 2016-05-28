@@ -54,14 +54,14 @@
   <!-- start banner -->
   <section id="banner">
     <div class="container-fluid">
-      <div class="jumbotron">
+      <div class="jumbotron" id="jumbotronDiv">
         <img class="img-responsive banner " id="img-banner" alt="banner" src="assets/images/banner-mobile.png" height="400"/>
         <video autoplay loop poster="assets/images/banner.png" id="bgvid" class="banner">
-          <source src="assets/images/Fundacao_HeroVideo.mp4" type="video/mp4">
+          <source src="assets/images/Fundacao_HeroVideo.mp4" type="video/mp4" id="src-video">
         </video>
 
         <div class="jumbotron-div-color">
-          <div class="row">
+          <div class="row" id="headline-banner">
             <div class="headline">
               <div class="col-lg-12 text-center">
                 <h1>
@@ -80,9 +80,9 @@
 
             </div>
           </div>
-          <div class="col-lg-3 col-lg-offset-1 col-sm-12 div-play-video">
+          <div class="col-lg-3 col-lg-offset-1 col-sm-12 div-play-video" id="div-play-video">
 
-            <a href="#">
+            <a onclick="btn_click();">
               <svg width="45px" height="45px" viewBox="-2 372 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
                 <desc>Created with Sketch.</desc>
@@ -227,7 +227,7 @@
       <div class="row">
         <!-- start box 1-->
 
-        <div class="col-lg-3 col-lg-offset-0 col-md-offset-4 col-sm-offset-4 col-xs-offset-1 box-white ">
+        <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-3 col-offset-0 col-lg-3 col-xs-offset-0 box-white ">
           <div class="text-center">
             <img class="text-center" src="assets/images/box-1.png" height="260" width="311"/>
             <div class="text-box">
@@ -463,6 +463,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/nav-bar.js"></script>
+    <script>
+      function btn_click(){
+        var player = document.getElementById('bgvid');
+        var mp4Vid = document.getElementById('src-video');
+        var divHeadline = document.getElementById('headline-banner');
+        var divBtnPlay = document.getElementById('div-play-video');
+        var jumbotronDiv = document.getElementById('jumbotronDiv');
+        player.pause();
+
+
+        mp4Vid.src = "assets/images/video2.mp4";
+        player.load();
+        divHeadline.style.display = "none";
+        divBtnPlay.style.display= "none";
+        //creating div jumbutron click
+        player.play();
+        document.getElementById("jumbotronDiv").onclick  = pause2;
+      /*  document.getElementById('jumbotronDiv').addEventListener("onclick",pause2);
+         function (event) {
+            event.preventDefault();
+            var player = document.getElementById('bgvid');
+            alert("pause");
+            player.pause();
+        }*/
+    }
+    function pause2 (){
+        alert("pause");
+        //var player = document.getElementById('bgvid');
+        //player.pause();
+      }
+
+    </script>
 
   </body>
   </html>
